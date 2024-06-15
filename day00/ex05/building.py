@@ -1,6 +1,9 @@
 import sys
 
 def building(arg):
+    """
+    This function takes a string and calculate the number of digits, lower case, upper case and spaces / punctuations. 
+    """
         upper = lower= digits=  punc = space = 0
         arg = arg
         l = len(arg)
@@ -18,6 +21,9 @@ def building(arg):
         print(f"The text contains {l} characters:\n{upper} upper letters\n{lower} lower letters\n{punc} punctuation marks\n{space} spaces\n{digits} digits")
 
 def main():
+    """
+    This main validates the argument passed to the program, it checks the length of the argument lines and its type. 
+    """
         try:
             arg = sys.argv
             l = len(arg)
