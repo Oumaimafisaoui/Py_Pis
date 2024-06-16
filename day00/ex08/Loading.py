@@ -6,15 +6,14 @@ def ft_tqdm(lst: range) -> None:
     for current in lst:
         yield current
         bare_length = 100
+        counter = int((current / l) * 101)
         filled = int((current / l) * bare_length)
         if (filled == bare_length - 1):
             bare = '=' * filled + '>'
         else:
             bare = '=' * filled + ' ' * (bare_length - filled)
-        print(f'\r[{bare}]', end='')
-        print(f' |{current}/{l}', end='')
-
-
+        print(f'\r {counter}% | [{bare}]', end='')
+        print(f' | {current}/{l}', end='')
     print()
 
 
