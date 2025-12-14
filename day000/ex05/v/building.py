@@ -31,6 +31,9 @@ def handle_one(string):
         if user == "":
             return
         print(count_everything(user))
+    except KeyboardInterrupt: #for ctl+c
+        print("\nInterrupted by user.")
+        return
     except AssertionError as e:
         print(e)
 
